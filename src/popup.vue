@@ -3,25 +3,13 @@
   h1 Captr
   p running on {{ path }}
   p {{ subdomain }} - {{ domain }}
+
+  button Capture
 </template>
 
 <script>
 import browser from 'webextension-polyfill'
 import * as URI from 'uri-js'
-import puppeteer from 'puppeteer'
-
-let pbrowser
-
-// const puppeteer = require('puppeteer');
-
-// (async () => {
-//   const browser = await puppeteer.launch();
-//   const page = await browser.newPage();
-//   await page.goto('https://apple.com');
-//   await page.screenshot({path: 'appl.png'});
-
-//   await browser.close();
-// })();
 
 export default {
   name: 'App',
@@ -49,12 +37,6 @@ export default {
       });
     });
 
-    pbrowser = await puppeteer.launch();
-    const page = await pbrowser.newPage();
-    await page.goto('https://apple.com');
-    await page.screenshot({path: 'appl.png'});
-    await pbrowser.close();
-    console.log('epec shit worked')
   }
 }
 </script>
