@@ -37,6 +37,7 @@ module.exports = (env) => {
     entry: {
       'background': './src/background.js',
       'content': './src/content.js',
+      'content_scanURLs': './src/content_scanURLs.js',
       'popup/popup': './src/popup.js',
       'options/options': './src/options.js',
     },
